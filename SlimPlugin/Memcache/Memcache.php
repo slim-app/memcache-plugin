@@ -13,15 +13,15 @@ class Memcache
 		if($use == true)
 		{
 			self::$useM = true;
-			$self->mc = new \Memcached();
-			$self->mc->addServer("127.0.0.1", 11211);
+			$this->mc = new \Memcached();
+			$this->mc->addServer("127.0.0.1", 11211);
 		}
 	}
 	public function set($key, $value, $expire = 0)
 	{
 		if(self::$useM==true)
 		{
-			$self->mc->set($key, $value, $expire);
+			$this->mc->set($key, $value, $expire);
 		}
 	}
 	public function get($key)
@@ -30,6 +30,6 @@ class Memcache
 		{
 			return false;
 		}
-		return $self->mc->get($key);
+		return $this->mc->get($key);
 	}
 }
