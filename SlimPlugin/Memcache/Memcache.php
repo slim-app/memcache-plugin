@@ -13,7 +13,7 @@ class Memcache
 		if($use == true)
 		{
 			self::$useM = true;
-			$self->mc = new Memcached();
+			$self->mc = new \Memcached();
 			$self->mc->addServer("127.0.0.1", 11211);
 		}
 	}
