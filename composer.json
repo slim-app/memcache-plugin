@@ -1,0 +1,19 @@
+{
+    "name": "slimapp/memcache",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kruemel",
+            "email": "kruemel@byte.gs"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "SlimPlugin\\Memcache": ""
+        }
+    }
+}
